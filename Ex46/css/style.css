@@ -1,0 +1,22 @@
+h3, h4 {
+    color: rgb(204, 76, 204);
+}
+ul {
+    list-style-type: none;
+}
+h1 {
+    color: rgb(221, 38, 188);
+}
+body {
+    background-color: rgb(250, 192, 91);
+}
+a {
+    text-transform: uppercase;
+    text-align: center;
+}
+.weather {
+    background-color: lightyellow;
+    border: 2px solid rgb(0, 105, 252);
+    text-align: center;
+    padding: 5px;
+}
