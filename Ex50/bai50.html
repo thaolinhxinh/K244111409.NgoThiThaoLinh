@@ -1,0 +1,95 @@
+<HTML>
+    <head> 
+        <title> Tiêu đề trang </title>    
+    </head>
+    <body style="background-color: #93e7ee">
+        <div style="text-align: center;">
+            <img src="images/DeLong.jpg">
+        </div>
+    <h1> Travel Expense Report</h1>
+    <hr>
+    <form>
+    <p> 1.First Name:
+    <input type="text" name="firstName"> 
+    Last Name:
+    <input type="text" name="lastName"> 
+    </p>
+    <p> 2.Social Security Number:
+    <input type="text" name="ssn"> 
+    </p>
+    <p> 3.Department: 
+        <select name="department">
+            <option value="accounting">Accounting</option>
+            <option value="human"> Human Resources </option>
+            <option value="tech"> Technology </option>
+            <option value="beauty "> Beauty </option>
+        </select>
+    </p>
+    <p> 4. Describe the purpose of your trip: </p>
+        <textarea name="tripPurpose" style="width: 500px; height: 100px;"> </textarea>
+    
+    <p> 5.Itemize your travel expenses: </p>
+        <table border="1" width=500>
+            <tr>
+                <th> Date </th>
+                <th> Description </th>
+                <th> Categories </th>
+            </tr>
+            <tr>
+                <td>     
+                    <input type="date" name="date"> 
+                </td>
+                <td>     
+                    <input type="text" name="description"> 
+                </td>
+                <td>     
+                    <select name="category">
+                        <option value="transportation"> Meal </option>
+                        <option value="hotel"> Transportation </option>
+                        <option value="meals"> Entertainment </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>     
+                    <input type="date" name="date"> 
+                </td>
+                <td>     
+                    <input type="text" name="description"> 
+                </td>
+                <td>     
+                    <select name="category">
+                        <option value="transportation"> Meal </option>
+                        <option value="hotel"> Transportation </option>
+                        <option value="meals"> Entertainment </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>     
+                    <input type="date" name="date"> 
+                </td>
+                <td>     
+                    <input type="text" name="description"> 
+                </td>
+                <td>     
+                    <select name="category">
+                        <option value="transportation"> Meal </option>
+                        <option value="hotel"> Transportation </option>
+                        <option value="meals"> Entertainment </option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    <p> 6. Have you submitted your receipts? 
+        <input type="radio" name="sex" value="male" checked=“checked” />
+            Yes
+        <input type="radio" name="sex" value="female" check=“checked”/>
+            No
+    </p>
+    <input type="submit" value="Submit travel expenses" />
+    <input type="reset" value="Reset" />
+    <p> Questions? Contact Debbie Larson in Accounting (ext 2150) </p>
+    </form>
+    </body>
+</HTML>
