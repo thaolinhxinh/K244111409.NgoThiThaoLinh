@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Process</title>
+</head>
+<body>
+    <h1> Get info</h1>
+    <hr/>
+    <h3>Submitted Details:</h3>
+    <div id="results"></div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const fullname = urlParams.get('fullname');
+        const email = urlParams.get('email');
+        const sendTo = urlParams.get('send_to');
+        const title = urlParams.get('title');
+        const content = urlParams.get('content');
+        const resultsDiv = document.getElementById('results');
+        resultsDiv.innerHTML = `
+            <div class="data-item"><span>Full Name:</span> ${fullname}</div>
+            <div class="data-item"><span>Email:</span> ${email}</div>
+            <div class="data-item"><span>Send To:</span> ${sendTo}</div>
+            <div class="data-item"><span>Title:</span> ${title}</div>
+            <div class="data-item"><span>Content:</span><br>${content.replace(/\n/g, '<br>')}</div>`;
+    </script>
+</body>
+</html>
