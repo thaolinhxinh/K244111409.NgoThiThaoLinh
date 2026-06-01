@@ -1,0 +1,23 @@
+<HTML>
+    <head> 
+        <title> Tiêu đề trang </title>   
+        <script src="js/mainjs1.js"></script>
+        <script type="text/javascript">
+            function kiemtra(a)
+            {
+                kq=isEven(eval(a))
+                if (kq==true)
+                    alert(a+" là số chẵn")
+                else
+                    alert(a+" là số lẻ")
+            }
+        </script>
+    </head>
+    <body>
+        <h1> KIỂM TRA SỐ CHẴN/LẺ </h1>
+        <P> Nhập số đi bro: </P>
+        <input type="number" id="soa">
+        <p> </p>
+        <input type="button" value="Kiểm tra chẵn lẻ" onclick="kiemtra(soa.value)"> 
+    </body>
+</HTML>

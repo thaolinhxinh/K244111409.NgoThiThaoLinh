@@ -1,0 +1,41 @@
+<HTML>
+    <head> 
+        <title> Tiêu đề trang </title>    
+        <script>
+            function xulyGiai(a,b)
+            {
+                kq=ptb1(eval(a),eval(b))
+                ketqua.value=kq
+            }
+            function ptb1(a,b)
+            {
+                return -b/a
+            }
+
+        </script>
+    </head>
+    <body>
+        <form>
+            <table>
+                <tr>
+                    <td> Hệ số a: </td>
+                    <td> <input type="text" id="a"> </td>
+                </tr>
+                <tr>
+                    <td> Hệ số b: </td>
+                    <td> <input type="text" id="b"> </td>
+                </tr>
+                <tr>
+                    <td> Kết quả: </td>
+                    <td> <input type="text" id="ketqua"> </td>
+                </tr>
+                <tr>
+                    <td colspan="2"> <input type="button" value="Giải phương trình" 
+                        onclick="xulyGiai(a.value, b.value,ketqua)"> 
+                    &nbsp;
+                    <input type="button" value="Thoát"> </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</HTML>
