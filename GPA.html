@@ -1,0 +1,113 @@
+<HTML>
+    <head> 
+        <title> GPA Calculation </title> 
+        <script>
+            function thanhphan()
+            {
+                var course = myForm.courseSelect.value;
+                
+                myForm.gpaDisplay.value = "";
+                
+                if (course == "course1")
+                {
+                    qt1.innerHTML = "30%";
+                    gk1.innerHTML = "20%";
+                    ck1.innerHTML = "50%";
+                    t1.innerHTML = "";
+                }
+                else if (course == "course2")
+                {
+                    qt1.innerHTML = "25%";
+                    gk1.innerHTML = "25%";
+                    ck1.innerHTML = "50%";
+                    t1.innerHTML = ""; 
+                }
+                else if (course == "course3")
+                {
+                    qt1.innerHTML = "15%";
+                    gk1.innerHTML = "20%";
+                    ck1.innerHTML = "50%";
+                    t1.innerHTML = "<td>  Điểm tài năng (T): </td>" +
+                                   "<td> <input type='text' id='nhapT'> </td>" +
+                                   "<td> 15% </td>";
+                }
+            }   
+
+            function calculateGPA()
+            {
+                var course = myForm.courseSelect.value;
+                
+                var qt = eval(myForm.nhapQT.value);
+                var gk = eval(myForm.nhapGK.value);
+                var ck = eval(myForm.nhapCK.value);
+
+                var gpa = 0;
+
+                if (course == "course1")
+                {
+                    gpa = (qt * 0.3) + (gk * 0.2) + (ck * 0.5);
+                }
+                else if (course == "course2")
+                {
+                    gpa = (qt * 0.25) + (gk * 0.25) + (ck * 0.5);
+                }
+                else if (course == "course3")
+                {
+                    var t = eval(myForm.nhapT.value);
+                    gpa = (qt * 0.15) + (gk * 0.2) + (ck * 0.5) + (t * 0.15);
+                }
+
+                myForm.gpaDisplay.value = "x = " + gpa;
+            }
+        </script>
+    </head>
+    
+    <body onload="thanhphan()">
+        <h1> GPA CALCULATION </h1>
+        <form id="myForm">
+            <h3> Select course: 
+            <select id="courseSelect" onchange="thanhphan()">
+                <option value="course1">COURSE 1</option>
+                <option value="course2">COURSE 2</option>
+                <option value="course3">COURSE 3</option>
+            </select>
+            </h3>
+            <br><br>
+            
+            <table border="1" cellpadding="5">
+                <tr>
+                    <td> Quá trình (QT): </td>
+                    <td> <input type="text" id="nhapQT"> </td>
+                    <td id="qt1"> </td>
+                </tr>
+
+                <tr>
+                    <td> Giữa kỳ (GK): </td>
+                    <td> <input type="text" id="nhapGK"> </td>
+                    <td id="gk1"> </td>
+                </tr>
+
+                <tr>
+                    <td> Cuối kỳ (CK): </td>
+                    <td> <input type="text" id="nhapCK"> </td>
+                    <td id="ck1"> </td>
+                </tr>
+
+                <tr id="t1">
+                    
+                </tr>
+
+                <tr>
+                    <td colspan="3" align="center"> 
+                        <input type="button" value="Tính GPA" onclick="calculateGPA()"> 
+                        &nbsp;&nbsp;
+                        <input type="reset" value="Clear" onclick="myForm.gpaDisplay.value=''"> 
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+            GPA: <input type="text" id="gpaDisplay" size="30">
+        </form>
+    </body>
+</HTML>
