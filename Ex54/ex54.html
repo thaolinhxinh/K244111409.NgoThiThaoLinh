@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculate(element) {
+            var a = Number(myform.a.value);
+            var b = Number(myform.b.value);
+            var c = Number(myform.c.value);
+            var action = element.innerHTML.trim();
+            var result=0;
+            if (action == "MAX"){
+                result = Math.max(a, b, c);
+            } else if (action == "MIN"){
+                result = Math.min(a, b, c);
+            } else if (action == "SIN"){
+                result = Math.sin(a); // Tính theo đơn vị Radian
+            } else if (action == "COS"){
+                result = Math.cos(a);
+            } else if (action == "a^b"){
+                result = Math.pow(a, b);
+            }
+            document.getElementById("result").innerHTML=result;
+        }
+    </script>
+
+</head>
+<body>
+    <form name="myform">
+        <table border="1">
+            <tr>
+                <td> a: </td>
+                <td> <input type="number" name="a"> </td>
+            </tr>
+            <tr>
+                <td> b: </td>
+                <td> <input type="number" name="b"> </td>
+            </tr>
+            <tr>
+                <td> c: </td>
+                <td> <input type="number" name="c"> </td>
+            </tr>
+            <tr>
+                <td> Result: </td>
+                <td> <div id="result"> </div> </td>
+            </tr>
+            <tr >
+            <td colspan="2"> 
+               <button type="button" onclick="calculate(this)">MAX</button> 
+                <button type="button" onclick="calculate(this)">MIN</button> 
+                <button type="button" onclick="calculate(this)">SIN</button>
+                <button type="button" onclick="calculate(this)">COS</button>
+                <button type="button" onclick="calculate(this)">a^b</button>
+            </td>
+            </tr>
+        </table>
+    </form>
+       
+</body>
+</html>
