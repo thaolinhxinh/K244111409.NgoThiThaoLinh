@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculate(element) {
+            var a = Number(myform.a.value);
+            var b = Number(myform.b.value);
+            var c = Number(myform.c.value);
+            var action = element.innerHTML.trim();
+            var result=0;
+            if (action == "Find Solutions"){
+                var delta = b*b - 4*a*c;
+                if (delta < 0){
+                    result="No solution";
+                } else if (delta == 0){
+                    result="One solution: " + (-b/(2*a));
+                } else {
+                    result="x1= " + ((-b+Math.sqrt(delta))/(2*a)) 
+                        + " x2= " + ((-b-Math.sqrt(delta))/(2*a));
+                }
+            }
+            document.getElementById("result").innerHTML=result;
+        }
+    </script>
+</head>
+<body>
+    <form name="myform">
+        <table border="1">
+        <tr>
+            <td colspan="2"> THE QUADRATIC EQUATION </td>
+        </tr>
+        <tr>
+            <td> a: </td>
+            <td> <input type="number" name="a"> </td>
+        </tr>
+        <tr>
+            <td> b: </td>
+                <td> <input type="number" name="b"> </td>
+            </tr>
+            <tr>
+                <td> c: </td>
+                <td> <input type="number" name="c"> </td>
+            </tr>
+            <tr>
+                <td> Result: </td>
+                <td> <div id="result"> </div> </td>
+            </tr>
+            <tr>
+            <td colspan="2"> 
+               <button type="button" onclick="calculate(this)">Find Solutions</button> 
+                <button type="reset">Clear</button> 
+            </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
