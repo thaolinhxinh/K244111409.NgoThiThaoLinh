@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 57</title>
+    <script>
+    function calculate(element) {
+        var action = element.innerHTML.trim();
+        var q1 = Number(myform.q1.value);
+        var q2 = Number(myform.q2.value);
+        var q3 = Number(myform.q3.value);
+
+        var p1 = Number(document.getElementById("p1").innerHTML);
+        var p2 = Number(document.getElementById("p2").innerHTML);
+        var p3 = Number(document.getElementById("p3").innerHTML);
+
+        var t1 = q1 * p1;
+        var t2 = q2 * p2;
+        var t3 = q3 * p3;
+
+        document.getElementById("t1").innerHTML = t1.toFixed(2);
+        document.getElementById("t2").innerHTML = t2.toFixed(2);
+        document.getElementById("t3").innerHTML = t3.toFixed(2);
+
+        var total = t1 + t2 + t3;
+
+        if (action == "Sum") {
+            document.getElementById("total").innerHTML = total.toFixed(2);
+        }
+    }
+    </script>
+</head>
+<body>
+    <form name="myform">
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <th>Part</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Item Total</th>
+        </tr>
+        <tr>
+            <td>C112</td>
+            <td>Mouse</td>
+            <td id="p1">19.95</td>
+            <td><input type="number" name="q1" value="0" min="0" oninput="calculate(this)"></td>
+            <td id="t1">0.00</td>
+        </tr>
+
+        <tr>
+            <td>B124</td>
+            <td>Keyboard US</td>
+            <td id="p2">29.95</td>
+            <td><input type="number" name="q2" value="0" min="0" oninput="calculate(this)"></td>
+            <td id="t2">0.00</td>
+        </tr>
+
+        <tr>
+            <td>U125</td>
+            <td>USB KingMax</td>
+            <td id="p3">39.95</td>
+            <td><input type="number" name="q3" value="0" min="0" oninput="calculate(this)"></td>
+            <td id="t3">0.00</td>
+        </tr>
+        <tr>
+            <td colspan="4" align="right" style="font-weight: bold;">Total:</td>
+            <td id="total" style="font-weight: bold; color: blue;">0.00</td>
+        </tr>
+
+        <tr>
+            <td colspan="5" align="center">
+                <button type="button" onclick="calculate(this)">Sum</button>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
