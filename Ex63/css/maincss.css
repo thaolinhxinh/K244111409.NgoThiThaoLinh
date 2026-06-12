@@ -1,0 +1,60 @@
+body
+{
+    font-family: Times New Roman;
+    margin:20px;
+}
+
+h1
+{
+    font-size:50px;
+}
+
+input[type=text]
+{
+    width:220px;
+}
+
+.header
+{
+    background:blue;
+    color:white;
+}
+
+.blue
+{
+    background:blue;
+}
+
+.red
+{
+    background:red;
+}
+
+.yellow
+{
+    background:yellow;
+}
+
+.green
+{
+    background:green;
+}
+
+.violet
+{
+    background:violet;
+}
+
+table
+{
+    border-collapse:collapse;
+}
+
+td,th
+{
+    padding:5px;
+}
+#tblBody tr:hover
+{
+    background-color: yellow;
+}

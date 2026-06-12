@@ -1,0 +1,140 @@
+<HTML>
+<head>
+    <title>Member Registration</title>
+
+    <link rel="stylesheet"
+          href="css/maincss.css">
+
+    <script src="js/dataset.js"></script>
+    <script src="js/mainjs.js"></script>
+</head>
+
+<body onload="loadBirth(); load_data();">
+<form id="myForm">
+    <h1>Member Registration</h1>
+    <hr>
+    <table>
+        <tr>
+            <td>Name(*)</td>
+            <td>
+                <input type="text"
+                       id="txtName"
+                       name="txtName">
+            </td>
+        </tr>
+        <tr>
+            <td>Birthday(*)</td>
+            <td>Day: <select id="day" name="day"> </select>
+                Month: <select id="month" name="month"> </select>
+                Year: <select id="year" name="year"> </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Gender(*)</td>
+
+            <td>
+
+                <input type="radio" name="gender" value="Man" checked>
+                Man
+                <input type="radio" name="gender" value="Woman">
+                Woman
+            </td>
+        </tr>
+        <tr>
+            <td>Email(*)</td>
+            <td>
+                <input type="text" id="txtEmail" name="txtEmail">
+            </td>
+        </tr>
+    </table>
+    <br>
+    <b>Your favorite:</b>
+    <br>
+    <input type="checkbox" id="cbShopping">
+    Shopping
+    <br>
+
+    <input type="checkbox" id="cbTourism">
+    Tourism
+    <br>
+    <input type="checkbox" id="cbChat">
+    Chat
+    <br>
+    <input type="checkbox" id="cbReading">
+    Read a book
+    <br>
+    <input type="checkbox"
+           id="cbMusic">
+    Listening to music
+    <br><br>
+
+    <b>Your favorite color:</b>
+    <br>
+    <input type="radio" name="color" value="Blue" checked>
+
+    <span class="blue">
+        Blue
+    </span>
+    <br>
+    <input type="radio" name="color" value="Red">
+    <span class="red">
+        Red
+    </span>
+    <br>
+
+    <input type="radio" name="color" value="Yellow">
+    <span class="yellow">
+        Yellow
+    </span>
+    <br>
+
+    <input type="radio" name="color" value="Green">
+
+    <span class="green">
+        Green
+    </span>
+    <br>
+
+    <input type="radio"
+           name="color"
+           value="Violet">
+
+    <span class="violet">
+        Violet
+    </span>
+
+    <br><br>
+
+    <input type="button"
+           value="Sign up"
+           onclick="create_new_member()">
+
+    <input type="button"
+           value="Next"
+           onclick="nextMember()">
+
+    <br><br>
+
+    <table border="1"
+           id="tblMember">
+
+        <thead>
+
+            <tr class="header">
+                <th>Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Birthday</th>
+                <th>Hobbies</th>
+                <th>Color</th>
+            </tr>
+        </thead>
+        <tbody id="tblBody">
+        </tbody>
+    </table>
+
+</form>
+
+</body>
+</HTML>
