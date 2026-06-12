@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Web Node</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <td>
+            <button onclick="addNode()">Add Node</button><br>
+        </td>
+
+        <td>
+            Content
+            <input type="text" id="txtContent">
+        </td>
+
+        <td>
+            Position
+            <input type="number" id="txtPosAdd">
+        </td>
+        <tr>
+            <td>  <button onclick="removeNode()">Remove Node</button><br>
+            <td> </td>
+            <td> 
+                Position
+                <input type="number" id="txtPosRemove"> 
+            </td>
+        <tr>
+            <td> <button onclick="modifyNode()">Modify Node</button> </td>
+            <td> 
+                New Content
+                <input type="text" id="txtNewContent">
+            </td>
+            <td>
+                Position
+                <input type="number" id="txtPosModify">
+            </td>
+    </tr>
+</table>
+
+<h3>Web Node</h3>
+
+<ul id="webNode">
+    <li>Data base</li>
+    <li>Web1</li>
+    <li>Web2</li>
+</ul>
+
+<script src="js/mainjs.js"></script>
+
+</body>
+</html>
