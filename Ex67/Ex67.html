@@ -1,0 +1,35 @@
+<HTML>
+    <head> 
+        <title> Tiêu đề trang </title>  
+        <script src="js/mainjs.js"> </script>
+        <link rel="stylesheet" href="css/maincss.css">
+    </head>
+    <body>
+        <div id="divdataset">
+
+        </div>
+        <table>
+            <thead>
+                <tr> 
+                    <td colspan="4"> List of Students  </td>
+                </tr>
+                <tr>
+                    <th id="header_id" style="cursor: pointer;"> Student ID </th>
+                    <th id="header_name" style="cursor: pointer;"> Student Name </th>
+                    <th id="header_birthday" style="cursor: pointer;"> Birthday </th>
+                    <th id="header_gender" style="cursor: pointer;"> Gender </th>
+                </tr>
+            </thead>
+            <tbody id="bodystudent">
+            
+            </tbody>
+        </table>
+        <script>
+        
+            bodystudent=document.getElementById("bodystudent");
+            //gọi AJAX sau
+            dataset_path="dataset/customer.xml";
+            load_customers_from_external_xml(dataset_path,bodystudent)
+        </script>
+    </body>
+</HTML>

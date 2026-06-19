@@ -1,0 +1,21 @@
+table, tr, th, td {
+    border: 1px solid black;
+}
+th {
+    background-color: green;
+    color: white;
+}
+tbody tr {
+    cursor: pointer;
+    background-color: #f5f5f5;
+}
+tbody tr:hover {
+    background-color: yellow;
+}
+thead tr td {
+    background-color: yellow;
+    text-align: center;
+}
+tbody tr td {
+    text-align: center;
+}

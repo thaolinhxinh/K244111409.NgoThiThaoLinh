@@ -1,0 +1,51 @@
+<HTML>
+<head>
+    <title>Student Information</title>
+    <script src="js/mainjs.js"></script>
+    <link rel="stylesheet" href="css/maincss.css">
+</head>
+
+<body onload="loadDetail()">
+
+    <table border="1">
+    <thead>
+        <tr>
+            <th colspan="2">Student Information</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Student ID:</td>
+            <td id="id"></td>
+        </tr>
+
+        <tr>
+            <td>Student Name:</td>
+            <td id="name"></td>
+        </tr>
+
+        <tr>
+            <td>Birthday:</td>
+            <td id="birthday"></td>
+        </tr>
+
+        <tr>
+            <td>Gender:</td>
+            <td id="gender"></td>
+        </tr>
+    </tbody>
+    </table>
+
+    <script>
+
+    function loadDetail()
+    {
+        student =JSON.parse(localStorage.getItem("student"));
+        document.getElementById("id").innerHTML = student.id;
+        document.getElementById("name").innerHTML = student.name;
+        document.getElementById("birthday").innerHTML = student.birthday;
+        document.getElementById("gender").innerHTML = student.gender;
+    }
+    </script>
+</body>
+</HTML>
